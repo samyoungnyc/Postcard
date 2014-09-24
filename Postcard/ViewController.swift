@@ -9,6 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var nameLabel: UILabel!
 
     @IBOutlet weak var messageLabel: UILabel!
     
@@ -30,6 +32,9 @@ class ViewController: UIViewController {
 
 
     @IBAction func sendMailButtonPress(sender: UIButton) {
+        nameLabel.hidden = false
+        nameLabel.text = enterNameField.text
+        nameLabel.textColor = UIColor.blueColor()
         messageLabel.hidden = false
         messageLabel.text = enterMsgField.text
         // SET   the variable to   GET  (set-to happens on the left of '=', get happens on the right of '='
